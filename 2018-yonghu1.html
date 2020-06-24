@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NuLL-回首</title>
+    <link rel="stylesheet" href="css/zhuye.css" />
+    <link rel="stylesheet" href="css/cropper.min.css">
+    <link rel="stylesheet" href="css/ImgCropping.css">
+    <link rel="stylesheet" href="css/colorpicker.css">
+    <link rel="stylesheet" href="css/colpick.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <header>
+        <div class="top">
+            <h>回 首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Look Back</h>
+            <a><img src="img/icon/years.png"><span>回顾往年</span></a>
+            <a href="2018-xiangce.html"><img src="img/icon/xiangce.png"><span>相册</span></a>
+            <a href="2018-zhuye.html"><img src="img/icon/dongtai.png"><span>动态</span></a>
+            <a href="2018-winter.html"><img src="img/icon/exit.png"><span>登出</span></a>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div id="simple_timer" style="left: 0px;"></div>
+            <div class="chang">
+                <img src="img/icon/X.png" id="X" onclick="close_chang()" />
+                <div id="headpic">
+                    <button id="replaceImg" class="l-btn">更换图片</button>
+                    <div style="width: 320px;height: 320px;border: solid 1px #555;padding: 5px;margin-top: 10px">
+                        <img id="finalImg" src="" width="100%">
+                    </div>
+                    <!--图片裁剪框 start-->
+                    <div style="display: none" class="tailoring-container">
+                        <div class="black-cloth" onclick="closeTailor(this)"></div>
+                        <div class="tailoring-content">
+                            <div class="tailoring-content-one">
+                                <label title="上传图片" for="chooseImg" class="l-btn choose-btn">
+                                    <input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" class="hidden" onchange="selectImg(this)">
+                                    选择图片
+                                </label>
+                                <div class="close-tailoring" onclick="closeTailor(this)">×</div>
+                            </div>
+                            <div class="tailoring-content-two">
+                                <div class="tailoring-box-parcel">
+                                    <img id="tailoringImg">
+                                </div>
+                                <div class="preview-box-parcel">
+                                    <p>图片预览：</p>
+                                    <div class="square previewImg"></div>
+                                    <div class="circular previewImg"></div>
+                                </div>
+                            </div>
+                            <div class="tailoring-content-three">
+                                <button class="l-btn cropper-reset-btn">复位</button>
+                                <button class="l-btn cropper-rotate-btn">旋转</button>
+                                <button class="l-btn cropper-scaleX-btn">换向</button>
+                                <button class="l-btn sureCut" id="sureCut">确定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--图片裁剪框 end-->
+                <div id="backcolor">
+                    <button id="picker">Show Color Picker</button>
+                </div>
+            </div>
+            <img src="img/head/spiderman.jpg" id="headsc">
+            <p id="nickname">NuLL</p>
+            <div class="zu">
+                <div class="change" id="touxiang" onclick="chang_head()">更换头像</div>
+                <div class="change paigusu" id="bizhi">更改壁纸</div>
+
+                <div class="zui"><a>个人资料</a></div>
+                <div class="zui"><a src="./2018-yonghu2.html">账号设置</a></div>
+                <div class="zui"><a src="./2018-yonghu3.html">密码设置</a></div>
+                <div class="zui"><a src="./2018-yonghu4.html">帮助中心</a></div>
+            </div>
+            <div class="ziliao">
+                <div class="sex">
+                    <p>性别</p>
+                    <label><input type="radio" name="sex" value="">男</label>
+                    <label><input type="radio" name="sex" value="">女</label>
+                    <label><input type="radio" name="sex" value="">其他</label>
+                </div>
+                <div class="birth">
+                    <p>生日</p>
+                   <div id="date" style="border: 0px;">
+		<select name="year" id="year">
+			<option value="">选择年份</option>
+		</select>
+		<select name="month" id="month">
+			<option value="">选择月份</option>
+		</select>
+		<select id="days">
+			<option value="">选择日期</option>
+		</select>
+	</div>
+                </div>
+                <div class="xingzuo">
+                    <p>星座</p>
+                    <h id="xingx"></h>
+                    <button id="huoqu">获取</button>
+                </div>
+                <div class="country">
+                    <p>国家</p>
+                    <select>
+                        <option value="volvo">中国</option>
+                        <option value="saab">美国</option>
+                        <option value="opel">英国</option>
+                        <option value="audi">法国</option>
+                        <option value="audi">俄罗斯</option>
+                    </select>
+                </div>
+                <div class="study">
+                    <p>学历</p>
+                    <select>
+                        <option value="volvo">小学</option>
+                        <option value="saab">初中</option>
+                        <option value="opel">高中</option>
+                        <option value="audi">本科</option>
+                    </select>
+                </div>
+                <div class="emotion">
+                    <p>情感</p>
+                    <select>
+                        <option value="volvo">单身</option>
+                        <option value="saab">已婚</option>
+                        <option value="opel">恋爱中</option>
+                        <option value="audi">不想恋爱</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+     <footer>
+        <div>@333</div>
+        <h>a story for a life</h>
+    </footer>
+    <script src="./js/hScroll.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/upload.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.syotimer.js"></script>
+    <script type="text/javascript" src="js/loginpass.js"></script>
+    <script type="text/javascript">
+        //初始化
+        new hScroll({
+            nav1: '.headv>div', //导航对应的元素
+            nav2: '.nav-list>div', //监听的元素
+            checkClass: 'headv-check' //选中的样式
+        });
+        // 
+        $("#simple_timer").syotimer({
+            year: 2019,
+            month: 1,
+            day: 1,
+            hour: 0,
+            minute: 0,
+            lang: 'chs',
+        });
+    </script>
+    <script src="js/cropper.min.js"></script>
+    <script>
+        //弹出框水平垂直居中
+        (window.onresize = function() {
+            var win_height = $(window).height();
+            var win_width = $(window).width();
+            if (win_width <= 768) {
+                $(".tailoring-content").css({
+                    "top": (win_height - $(".tailoring-content").outerHeight()) / 2,
+                    "left": 0
+                });
+            } else {
+                $(".tailoring-content").css({
+                    "top": (win_height - $(".tailoring-content").outerHeight()) / 2,
+                    "left": (win_width - $(".tailoring-content").outerWidth()) / 2
+                });
+            }
+        })();
+
+        //弹出图片裁剪框
+        $("#replaceImg").on("click", function() {
+            $(".tailoring-container").toggle();
+        });
+        //图像上传
+        function selectImg(file) {
+            if (!file.files || !file.files[0]) {
+                return;
+            }
+            var reader = new FileReader();
+            reader.onload = function(evt) {
+                var replaceSrc = evt.target.result;
+                //更换cropper的图片
+                $('#tailoringImg').cropper('replace', replaceSrc, false); //默认false，适应高度，不失真
+            }
+            reader.readAsDataURL(file.files[0]);
+        }
+        //cropper图片裁剪
+        $('#tailoringImg').cropper({
+            aspectRatio: 1 / 1, //默认比例
+            preview: '.previewImg', //预览视图
+            guides: false, //裁剪框的虚线(九宫格)
+            autoCropArea: 0.5, //0-1之间的数值，定义自动剪裁区域的大小，默认0.8
+            movable: false, //是否允许移动图片
+            dragCrop: true, //是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域
+            movable: true, //是否允许移动剪裁框
+            resizable: true, //是否允许改变裁剪框的大小
+            zoomable: false, //是否允许缩放图片大小
+            mouseWheelZoom: false, //是否允许通过鼠标滚轮来缩放图片
+            touchDragZoom: true, //是否允许通过触摸移动来缩放图片
+            rotatable: true, //是否允许旋转图片
+            crop: function(e) {
+                // 输出结果数据裁剪图像。
+            }
+        });
+        //旋转
+        $(".cropper-rotate-btn").on("click", function() {
+            $('#tailoringImg').cropper("rotate", 45);
+        });
+        //复位
+        $(".cropper-reset-btn").on("click", function() {
+            $('#tailoringImg').cropper("reset");
+        });
+        //换向
+        var flagX = true;
+        $(".cropper-scaleX-btn").on("click", function() {
+            if (flagX) {
+                $('#tailoringImg').cropper("scaleX", -1);
+                flagX = false;
+            } else {
+                $('#tailoringImg').cropper("scaleX", 1);
+                flagX = true;
+            }
+            flagX != flagX;
+        });
+
+        //裁剪后的处理
+        $("#sureCut").on("click", function() {
+            if ($("#tailoringImg").attr("src") == null) {
+                return false;
+            } else {
+                var cas = $('#tailoringImg').cropper('getCroppedCanvas'); //获取被裁剪后的canvas
+                var base64url = cas.toDataURL('image/png'); //转换为base64地址形式
+                $("#finalImg").prop("src", base64url); //显示为图片的形式
+
+                //关闭裁剪框
+                closeTailor();
+            }
+        });
+        //关闭裁剪框
+        function closeTailor() {
+            $(".tailoring-container").toggle();
+        }
+    </script>
+    <script src="js/paigusu.min.js"></script>
+    <script>
+        $('.paigusu').paigusu({
+            color: '#E4E4E2' //初始色  支持两种配置方案
+            //		,color : '42,0,255'
+        }, function(event, obj) {
+            console.log(event);
+            console.log(obj);
+            $("body").css('background-color', '#' + obj.hex)
+        });
+    </script>
+    <script src="js/select.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			$("#date").selectDate()
+			
+			$("#days").focusout(function(){
+				var year = $("#year option:selected").html()
+				var month = $("#month option:selected").html()
+				var day = $("#days option:selected").html()
+				console.log(year+month+day)
+			})
+			
+		})
+		
+	</script>
+</body>
+
+</html>

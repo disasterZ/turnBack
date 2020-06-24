@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NuLL-回首</title>
+    <link rel="stylesheet" href="css/2019.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+
+</head>
+
+<body style="overflow-y: hidden;">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <header>
+        <div class="top">
+            <h>回 首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Looking Back</h>
+            <a style="margin-left: 100px;" id="changg"><img src="img/icon/change.png"><span>换一批</span></a>
+            <a href="2019-newyear.html"><img src="img/icon/exit.png"><span>登出</span></a>
+        </div>
+        <input type="search" placeholder="手机号或邮箱" id="worldsearch">
+    </header>
+    <section>
+        <div class="demo">
+            <svg class="sidebar" viewBox="0 0 300 500">
+                <path class="s-path" fill="#fff" d="M0,0 50,0 a0,250 0 1,1 0,500 L0,500" />
+            </svg>
+            <div class="static">
+            </div>
+            <div class="sidebar-content">
+                <div class="contact">
+                    <img src="img/1.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Ethan Hawke</span>
+                    <span class="contact__status online"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/2.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Natalie Portman</span>
+                    <span class="contact__status online"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/3.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Kevin Spacey</span>
+                    <span class="contact__status online"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/4.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Rosamund Pike</span>
+                    <span class="contact__status online"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/5.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Robert Redford</span>
+                    <span class="contact__status online"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/6.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Scarlett Johansson</span>
+                    <span class="contact__status online"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/7.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Tom Cruise</span>
+                    <span class="contact__status"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/8.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Eva Green</span>
+                    <span class="contact__status"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/9.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Paul Newman</span>
+                    <span class="contact__status"></span>
+                </div>
+                <div class="contact">
+                    <img src="img/1.png" alt="" class="contact__photo" />
+                    <span class="contact__name">Thomas Break</span>
+                    <span class="contact__status"></span>
+                </div>
+                <div class="search">
+                    <img src="img/t8TeL1S.png" alt="" class="search__img" />
+                    <input type="text" class="search__input" placeholder="Search" />
+                </div>
+            </div>
+            <div class="chat">
+                <span class="chat__back"></span>
+                <span class="chat__status">status</span>
+                <div class="chat__person">
+                    <span class="chat__online active"></span>
+                    <span class="chat__name">Huehue Huehue</span>
+                </div>
+                <div class="chat__messages">
+                    <div class="chat__msgRow">
+                        <div class="chat__message mine">Such SVG, much Javascript, very CSS!</div>
+                    </div>
+                    <div class="chat__msgRow">
+                        <div class="chat__message notMine">Wow!</div>
+                    </div>
+                    <div class="chat__msgRow">
+                        <div class="chat__message notMine">Very elastic! Such easings!</div>
+                    </div>
+                    <div class="chat__msgRow">
+                        <div class="chat__message mine">
+
+                        </div>
+                    </div>
+                </div>
+                <input type="text" class="chat__input" placeholder="Your message" />
+            </div>
+        </div>
+        <div id="world">
+                      <a id="messager1" href="2019-zhuye.html"><p>NuLL</p></a>
+                      <a id="messager2"><p>NuLL</p></a>
+                      <a id="messager3"><p>NuLL</p></a>
+                      <a id="messager4"><p>NuLL</p></a>
+                      <a id="messager5"><p>NuLL</p></a>
+                      <a id="messager6"><p>NuLL</p></a>
+          
+        </div>
+        <div id="simple_timer"></div>
+    </section>
+    <script src="./js/hScroll.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/upload.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.syotimer.js"></script>
+    <script type="text/javascript" src="js/loginpass.js"></script>
+    <script type="text/javascript">
+        //初始化
+        new hScroll({
+            nav1: '.headv>div', //导航对应的元素
+            nav2: '.nav-list>div', //监听的元素
+            checkClass: 'headv-check' //选中的样式
+        });
+        // 
+        $("#simple_timer").syotimer({
+            year: 2019,
+            month: 1,
+            day: 1,
+            hour: 1,
+            minute: 0,
+            lang: 'chs',
+            dayVisible: false,
+        });
+    </script>
+    <script src="js/GoToTop.js"></script>
+    <script>
+        //示例
+        $('#js-go_top').gotoTop({
+            offset: 20, //距离顶部的位置
+            speed: 300, //移动到顶部的速度
+            /*     iconSpeed : 300, //icon动画样式的速度*/
+            animationShow: {
+                'transform': 'translate(0,0)',
+                'transition': 'transform .5s ease-in-out'
+            }, //icon动画样式显示时
+            animationHide: {
+                'transform': 'translate(80px,0)',
+                'transition': 'transform .5s ease-in-out'
+            } //icon动画样式隐藏时
+        });
+    </script>
+    <script type="text/javascript" src='js/stopExecutionOnTimeout.js'></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

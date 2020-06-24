@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NuLL-回首</title>
+    <link rel="stylesheet" href="css/zhuye.css" />
+    <link rel="stylesheet" href="css/upload.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <header>
+        <div class="top">
+            <h>回 首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Look Back</h>
+            <a><img src="img/icon/years.png"><span>回顾往年</span></a>
+            <a href="2018-xiangce.html"><img src="img/icon/xiangce.png"><span>相册</span></a>
+            <a href="2018-yonghu1.html"><img src="img/icon/chilun.png"><span>用户中心</span></a>
+            <a href="2018-winter.html"><img src="img/icon/exit.png"><span>登出</span></a>
+        </div>
+        <input type="search" placeholder="关键词或标签" id="topsearch">
+    </header>
+    <section>
+        <div class="main">
+            <div id="simple_timer" style="left: 0px;"></div>
+            <img src="./img/head/beijing.png" alt="" class="crist">
+            <div class="crist-text">Merry Christmas</div>
+            <img src="img/head/spiderman.jpg" id="headsc">
+            <p id="nickname">NuLL</p>
+            <div class="up-qie">
+                <a id="up-pic"></a>
+                <a id="up-text"></a>
+                <a id="up-video"></a>
+                <a id="up-music"></a>
+            </div>
+            <div class="up-main">
+                <a id="zwb_upload">
+                    <input type="file" class="add" multiple>
+                </a>
+                <textarea class="up-text">输入你想要的内容</textarea>
+                <div class="upbiaoqian">
+                   <h>标签：</h>
+                    <div class="biaoqianup"><p>#</p><input type="text"></div>
+                    <div class="biaoqianup"><p>#</p><input type="text"></div>
+                    <div class="biaoqianup"><p>#</p><input type="text"></div>
+                </div>
+                <button class="toup">上  传</button>
+            </div>
+            <img src="./img/icon/zhang.png" alt="" class="zhang2">
+        </div>
+    </section>
+    <script src="./js/hScroll.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/upload.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.syotimer.js"></script>
+    <script type="text/javascript" src="js/loginpass.js"></script>
+    <script type="text/javascript">
+        //初始化
+        new hScroll({
+            nav1: '.headv>div', //导航对应的元素
+            nav2: '.nav-list>div', //监听的元素
+            checkClass: 'headv-check' //选中的样式
+        });
+        // 
+        $("#simple_timer").syotimer({
+            year: 2019,
+            month: 1,
+            day: 1,
+            hour: 0,
+            minute: 0,
+            lang: 'chs',
+        });
+    </script>
+    <script src="js/GoToTop.js"></script>
+    <script>
+        //示例
+        $('#js-go_top').gotoTop({
+            offset: 20, //距离顶部的位置
+            speed: 300, //移动到顶部的速度
+            /*     iconSpeed : 300, //icon动画样式的速度*/
+            animationShow: {
+                'transform': 'translate(0,0)',
+                'transition': 'transform .5s ease-in-out'
+            }, //icon动画样式显示时
+            animationHide: {
+                'transform': 'translate(80px,0)',
+                'transition': 'transform .5s ease-in-out'
+            } //icon动画样式隐藏时
+        });
+    </script>
+    <script src="js/upload.min.js"></script>
+    <script>
+        //配置需要引入jq 1.7.2版本以上
+        //服务器端成功返回 {state:1,path:文件保存路径}
+        //服务器端失败返回 {state:0,errmsg:错误原因}
+        //默认做了文件名不能含有中文,后端接收文件的变量名为file
+        $("#zwb_upload").bindUpload({
+            url: "/home/index/upload", //上传服务器地址
+            callbackPath: "#callbackPath2", //绑定上传成功后 图片地址的保存容器的id或者class 必须为input或者textarea等可以使用$(..).val()设置之的表单元素
+            // ps:值返回上传成功的 默认id为#callbackPath  保存容器为位置不限制,id需要加上#号,class需要加上.
+            // 返回格式为:
+            // 原来的文件名,服务端保存的路径|原来的文件名,服务端保存的路径|原来的文件名,服务端保存的路径|原来的文件名,服务端保存的路径....
+            num: 10, //上传数量的限制 默认为空 无限制
+            type: "jpg|png|gif|svg", //上传文件类型 默认为空 无限制
+            size: 3, //上传文件大小的限制,默认为5单位默认为mb
+        });
+    </script>
+</body>
+
+</html>

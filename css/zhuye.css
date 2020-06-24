@@ -1,0 +1,1089 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1400px;
+    background-color: #E4E4E2;
+    overflow-x: hidden;
+}
+ .goTop >img{
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .goTop{
+            position: fixed;
+            right : 20px;
+            bottom : 20px;
+        }
+#topsearch{
+    position: fixed; 
+    height: 25px;
+    width: 200px;
+    box-shadow: 5px;
+    left: 680px;
+    top:7px;
+    display: none;
+}
+/*大图*/
+.big {
+    position: fixed;
+    top:0px;
+    left: 0px;
+    min-width: 1600px;
+    min-height: 1200px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: none;
+    
+}
+#X {
+    height: 50px;
+}
+#bigpic{
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*倒计时*/
+#simple_timer{
+    position: fixed;
+    top: 100px;
+    left: -110px;
+    width: 150px;
+}
+#simple_timer:hover{
+    left: 0px;
+}
+.timer {
+    text-align: center;
+    margin: 30px auto 0;
+    padding: 0 0 10px;
+    border-bottom: 2px solid #80a3ca;
+}
+
+.timer .table-cell {
+    display: inline-block;
+    margin: 0 5px;
+    width: 79px;
+    background: url(../img/timer.png) no-repeat 0 0;
+}
+
+.timer .table-cell .tab-val {
+    font-size: 35px;
+    color: #80a3ca;
+    height: 81px;
+    line-height: 81px;
+    margin: 0 0 5px;
+}
+
+.timer .table-cell .tab-metr {
+    font-family: "index";
+    font-size: 20px;
+    text-transform: uppercase;
+    color: gray;
+}
+
+#simple_timer.timer .table-cell.day,
+#periodic_timer_days.timer .table-cell.hour {
+    width: 120px;
+    background-image: url(../img/timer_long.png) ;
+}
+
+/*上传*/
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+.selector {
+    position: fixed;
+    left: 1200px;
+    top:200px;
+    width: 100px;
+    height: 100px;
+}
+
+.selector button {
+    position: relative;
+    border-radius: 50%;
+    border:0;
+    cursor: pointer;
+    transition: all .1s;
+}
+.selector button img{
+    width: 100px;
+}
+
+.selector ul {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+}
+
+.selector li {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    margin: 0 50%;
+    -webkit-transform: rotate(-360deg);
+    transition: all 0.8s ease-in-out;
+}
+
+.selector li input {
+    display: none;
+}
+
+.selector li input + label {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    line-height: 1px;
+    margin-left: 0;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+    border: 0px;
+}
+.selector li label img{
+    width: 90px;
+    margin-left: -5px;
+    margin-top: -6px;
+}
+.selector li input + label:hover {
+    background: #f0f0f0;
+}
+
+
+.selector.open li input + label {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin-left: -40px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+/*尾*/
+footer {
+    height: 40px;
+    min-width: 2000px;
+    background: rgba(108, 71, 148, 0.5);
+    position: absolute;
+    z-index: 99;
+    bottom: 0px;
+}
+footer div{
+    font-family: "Edwardian Script ITC";
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+     left: 1310px;
+    top:5px;
+}
+footer h{
+     font-family: "Edwardian Script ITC";
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 1200px;
+}
+/*头*/
+header {
+    height: 40px;
+    min-width: 2000px;
+    background: rgba(108, 71, 148, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.top {
+    width: 1000px;
+    height: 40px;
+    margin-left: 300px;
+}
+
+.top h {
+    font-family: "Edwardian Script ITC";
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 350px;
+}
+
+.top a {
+    margin-right: 10px;
+    position: relative;
+    top: -8px;
+    text-decoration: none;
+}
+
+.top a img {
+    width: 25px;
+    margin-right: 5px;
+    position: relative;
+    top: 7px;
+}
+
+.top a span {
+    color: white;
+    font-weight: bold;
+}
+
+/*身体*/
+section {
+    min-width: 1200px;
+    margin-top: 40px;
+}
+
+.main {
+    width: 1000px;
+    margin-left: 300px;
+    min-height: 700px;
+}
+
+#headsc {
+    width: 130px;
+    position: fixed;
+    top: 80px;
+    left: 350px;
+}
+
+#nickname {
+    color: black;
+    font-family: "黑体";
+    font-weight: bold;
+    font-size: 30px;
+    position: fixed;
+    left: 350px;
+    top: 220px;
+}
+
+/*导航*/
+.headv {
+    position: fixed;
+    top: 280px;
+    left: 350px;
+    width: 150px;
+    right: 0;
+    z-index: 10;
+    border-radius: 5px;
+    background: rgba(108, 71, 148, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.headv > div {
+    float: left;
+    padding: 5px;
+    width: 140px;
+    cursor: pointer;
+}
+
+.headv-check {
+    background-color: darkgrey;
+}
+
+.nav-list {
+    width: 600px;
+    position: relative;
+    left: 250px;
+    top: 100px;
+}
+
+/*动态*/
+.sousuo {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(108, 71, 148, 0.5);
+    width: 600px;
+    position: relative;
+    left: 250px;
+    top: 100px;
+    margin-bottom: 10px;
+}
+
+.sousuo img {
+    width: 30px;
+    position: relative;
+    left: 350px;
+    top: 5px;
+}
+
+.sousuo input {
+    height: 25px;
+    width: 200px;
+    position: relative;
+    left: 358px;
+    top: -6px;
+    box-shadow: 5px;
+}
+
+.nav1 {
+    background: rgba(108, 71, 148, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.nav2 {
+    background: rgba(108, 71, 148, 0.55);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav3 {
+    background: rgba(108, 71, 148, 0.6);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav4 {
+    background: rgba(108, 71, 148, 0.65);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav5 {
+    background: rgba(108, 71, 148, 0.7);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav6 {
+    background: rgba(108, 71, 148, 0.75);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav7 {
+    background: rgba(108, 71, 148, 0.8);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav8 {
+    background: rgba(108, 71, 148, 0.85);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav9 {
+    background: rgba(108, 71, 148, 0.9);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav10 {
+    background: rgba(108, 71, 148, 0.95);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav11 {
+    background: rgba(108, 71, 148, 1);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav12 {
+    background: rgba(108, 71, 148, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.month h {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    left: 15px;
+    top: 2px;
+    font-family: "华文行楷";
+}
+
+.month p {
+    float: right;
+    color: white;
+    margin-right: 10px;
+    font-family: "Edwardian Script ITC";
+    font-size: 24px;
+}
+
+.text {
+    border-radius: 3px;
+    width: 580px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: white;
+    position: relative;
+}
+
+.text p {
+    line-height: 150%;
+    font-size: 16px;
+}
+
+.notes {
+    color: gray;
+    margin-left: 10px;
+}
+
+.notes:hover {
+    text-decoration-line: underline;
+    color: red;
+}
+
+.trashbin {
+    width: 25px;
+    float: right;
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+
+.text h {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.pic1-1 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+.pic1-2 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+    position: absolute;
+    left: 155px;
+    top: 0px;
+}
+
+.pic1-3 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+    position: absolute;
+    left: 310px;
+    top: 0px;
+}
+
+.pic2-1 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+}
+.day{
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    left: 15px;
+    top: 2px;
+    font-family: "华文行楷";
+}
+
+.pic2-2 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+    position: absolute;
+    left: 155px;
+    top: 155px;
+}
+
+.pic2-3 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+    position: absolute;
+    left: 310px;
+    top: 155px;
+}
+
+.pic3-1 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+}
+
+.pic3-2 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+    position: absolute;
+    left: 155px;
+    top: 310px;
+}
+
+.pic3-3 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+    position: absolute;
+    left: 310px;
+    top: 310px;
+}
+
+.pic {
+    width: 300px;
+}
+
+.video {
+    text-align: center;
+    background-color: black;
+}
+
+.video video {
+    width: 300px;
+}
+/*个人中心篇*/
+
+.zu{
+    position: fixed;
+    width: 130px;
+    height: 400px;
+    left: 350px;
+    top:250px;
+}
+.change{
+    color: white;
+    background: rgba(108, 71, 148, 0.8);
+    text-align: center;
+    height: 20px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 5px 0 ;
+}
+.zui{
+    color: white;
+    background: rgba(108, 71, 148, 0.5);
+    text-align: center;
+    height: 20px;
+    width: 100px;
+    padding: 5px 0 ;
+    margin: 1px auto;
+}
+.ziliao{
+    background:  rgba(108, 71, 148, 0.5);
+    position: absolute;
+    width: 750px;
+    left: 520px;
+    top: 100px;
+    height: 600px;
+}
+
+.ziliao div{
+    height: 70px;
+    width: 600px;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 20px;
+    
+}
+.ziliao div p{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.sex label{
+    position: relative;
+    top:-27px;
+    left: 100px;
+    margin-right: 30px;
+}
+.ziliao div select{
+    position: relative;
+    left: 100px;
+    top:-27px;
+    width: 100px;
+}
+.xingzuo h{
+    position: absolute;
+    left: 100px;
+    top: 162px;
+}
+#huoqu{
+    position:absolute;
+    left: 200px;
+    top:167px;
+    background-color: cornflowerblue;
+    color: white;
+    border: 0px;
+    width: 70px;
+    border-radius: 5px;
+}
+/*修改头像*/
+.chang {
+    position: absolute;
+    min-width: 1600px;
+    min-height: 740px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    top:0;
+    left: 0;
+    display: none;
+}
+#headpic{
+    margin-top: 50px;
+    margin-left: 550px;
+}
+/*账号篇*/
+.nickname input{
+    position: absolute;
+    left:100px;
+    top:20px;
+    width: 300px;
+    height: 25px;
+}
+.phonechange{
+    position: relative;
+    padding-bottom: 50px;
+}
+#phone{
+    position: absolute;
+    left:100px;
+    top:20px;
+    width: 300px;
+    height: 25px;
+}
+#phone2{
+   position: absolute;
+    left:100px;
+    top:70px;
+    width: 100px;
+    height: 25px; 
+}
+#send{
+    position: absolute;
+    left:230px;
+    top:67px;
+    background-color: rgb(108, 71, 148);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+     width: 100px;
+    height: 30px;
+}
+#mailchange{
+    position: relative;
+}
+#mailchange input{
+    position: absolute;
+    left:100px;
+    top:20px;
+    width: 300px;
+    height: 25px;
+}
+#save{
+    position: absolute;
+    left:280px;
+    top:530px;
+    background-color: rgb(108, 71, 148);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+     width: 150px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*改密码*/
+#save2{
+    position: absolute;
+    left:280px;
+    top:530px;
+    background-color: rgb(108, 71, 148);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+     width: 150px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.oldpass input{
+    position: relative;
+    left:100px;
+    top:-30px;
+    width: 300px;
+    height: 25px;
+}
+.eye {
+    width: 30px;
+    position: relative;
+    left:60px;
+    top:-27px;
+}
+/*相册*/
+.yuan{
+   background:  rgba(108, 71, 148,0.5);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+.yuan img{
+    width: 75px;
+    margin-left: 15px;
+    margin-top: 10px;
+    position: absolute;
+}
+.coverthing{
+    background:  rgba(0, 0, 0,0.5);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    display: none;
+}
+.coverthing p{
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+.xiangcekuang{
+    background: rgba(108, 71, 148, 0.5);
+    width: 800px;
+    position: relative;
+    left: 250px;
+    top: 70px;
+    margin-bottom: 10px;
+    height: 600px;
+}
+.ce_1{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50px;
+    top: 50px;
+}
+.ce_1 div{
+    overflow: hidden;
+     width: 150px;
+    height: 150px;
+    border: 5px solid white;
+}
+.ce_1 img{
+    width:200px;
+    text-align: center;
+    position: relative;
+    right:20%;
+    bottom: 100px;
+}
+.ce_1 p{
+    position: absolute;
+    color: white;
+    margin-left: 55px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.ce_2{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 250px;
+    top: 50px;
+}
+.ce_2 div{
+    overflow: hidden;
+     width: 150px;
+    height: 150px;
+    border: 5px solid white;
+}
+.ce_2 img{
+    width:300px;
+    text-align: center;
+    position: relative;
+    right:20%;
+}
+.ce_2 p{
+    position: absolute;
+    color: white;
+    margin-left: 55px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.ce_3{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 450px;
+    top: 50px;
+}
+.ce_3 div{
+    overflow: hidden;
+     width: 150px;
+    height: 150px;
+    border: 5px solid white;
+}
+.ce_3 img{
+    width:300px;
+    text-align: center;
+    position: relative;
+    right:20%;
+}
+.ce_3 p{
+    position: absolute;
+    color: white;
+    margin-left: 55px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.ce_4{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50px;
+    top: 250px;
+}
+.ce_4 div{
+    overflow: hidden;
+     width: 150px;
+    height: 150px;
+    border: 5px solid white;
+}
+.ce_4 img{
+    width:300px;
+    text-align: center;
+    position: relative;
+    right:20%;
+}
+.ce_4 p{
+    position: absolute;
+    color: white;
+    margin-left: 55px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.zhang{
+    position: absolute;
+    width: 200px;
+    left: 600px;
+    top: 400px;
+    transform:rotate(-15deg);
+}
+.uppic{
+    position: absolute;
+    border-radius: 10px;
+    border: 0px;
+    width: 80px;
+    height: 25px;
+    background-color:cornflowerblue;
+    left: 100px;
+    top:7px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.piliang{
+    position: absolute;
+    border-radius: 5px;
+    border: 0px;
+    width: 70px;
+    height: 20px;
+    left: 190px;
+    top:9px;
+    color: black;
+}
+.sousuo p{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    left: 10px;
+}
+.tongyipic{
+    width: 300px;
+    position: relative;
+    top: -20%;
+}
+/*上传*/
+.up-qie{
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    top:280px;
+    left: 330px;
+}
+#up-pic{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+   background-image:url(../img/icon/up-img.png) ;
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+#up-text{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+   background-image:url(../img/icon/up-text.png) ;
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+#up-video{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    border-radius: 50%;
+   background-image:url(../img/icon/up-video.png) ;
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+#up-music{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    border-radius: 50%;
+   background-image:url(../img/icon/up-music.png) ;
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+.up-main{
+    position: absolute;
+    width: 650px;
+    height: 550px;
+    left: 550px;
+    top:150px;
+   background: rgba(108, 71, 148, 0.5);
+    border-radius: 5px;
+}
+.zhang2{
+    position: absolute;
+    width: 200px;
+    left: 1100px;
+    top: 530px;
+    transform:rotate(-15deg);
+}
+.toup{
+    position: absolute;
+    left: 260px;
+    top:450px;
+    border:0px;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 20px;
+}
+.up-text{
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    left: 70px;
+    top:250px;
+}
+.biaoqianup p{
+    color: white;
+    font-size: 20px;
+    float: left;
+}
+.biaoqianup input{
+    font-size: 20px;
+    border-radius: 10px;
+    width:100px;
+    float: left;
+    margin-right: 10px;
+}
+.upbiaoqian{
+    position: relative;
+    left: 100px;
+    top: 250px;
+}
+.upbiaoqian h{
+   color: white;
+    font-weight: bold;
+    float: left;
+}
+.crist{
+    width: 500px;
+    position: absolute;
+    left: 630px;
+    top:50px
+}
+.crist-text{
+    width: 500px;
+    position: absolute;
+    left: 630px;
+    top:50px;
+    color: white;
+    font-family: "Edwardian Script ITC";
+    font-size: 50px;
+}
+#QA{
+    color:white;
+    font-size: 24px;
+    position: absolute;
+    left: 30px;
+    top:10px;
+}
+.qa{
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    left: 30px;
+    top:60px;
+}
+.answer{
+    position: absolute;
+    width: 500px;
+    color: white;
+    font-size: 18px;
+    left: 40px;
+    top:100px;
+}
+#answ2{
+    display: none;
+}

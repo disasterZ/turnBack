@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <meta charset="utf-8" />
+    <title>回首</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/downcount.css" />
+</head>
+
+<body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <audio src="audio/rain.mp3" autoplay="autoplay" loop="loop" preload="auto" >
+              你的浏览器不支持audio标签
+    </audio>
+    <main>
+        <div id="overlay"></div>
+        <ul id="scene">
+            <li class="layer" data-depth="0.1">
+                <div class="layer1"></div>
+            </li>
+        </ul>
+        <div class="wrapper">
+            <div class="login">
+                <img src="img/logo/LOGO2018.png" id="logo" />
+                <div id="user">
+                    <img src="img/icon/user.png" id="user2" />
+                    <input type="text" onclick="input_user()" />
+                </div>
+                <div id="password">
+                    <img src="img/icon/key.png" class="key" />
+                    <img src="img/icon/eye.png" class="eye" onclick="checkpassword()" />
+                    <input type="password" onclick="input_password()" />
+                </div>
+                <p>忘记密码？</p>
+                <h>还没账户？点击<span onclick="topass()">注册</span></h>
+                <button id="denglu2" type="submit">登 陆</button>
+                <img src="img/icon/X.png" id="X" onclick="close_login()" />
+            </div>
+            <div class="pass">
+                <img src="img/logo/LOGO2018.png" id="logo" />
+                <div id="phonenum">
+                    <img src="img/icon/phone.png" />
+                    <input type="text" id="phone" autocomplete="off" onclick="input_phone()" />
+                </div>
+                <div id="sendcode">
+                    <input type="text" id="phone2" placeholder="请输入验证码" />
+                    <input type="button" id="send" value="点击获取验证码" onclick="sendMessage1()">
+                </div>
+                <div id="email">
+                    <img src="img/icon/mail.png" />
+                    <input type="text" autocomplete="off" onclick="input_mail()" />
+                </div>
+                <div id="heart">
+                    <img src="img/icon/heart.png" />
+                    <input type="text" autocomplete="off" onclick="input_heart()" />
+                </div>
+                <div id="password2">
+                    <img src="img/icon/key.png" class="key" />
+                    <img src="img/icon/eye.png" class="eye" onclick="checkpassword2()" />
+                    <input type="password" onclick="input_password2()" />
+                </div>
+                <div id="repassword">
+                    <img src="img/icon/key.png" class="key" />
+                    <img src="img/icon/eye.png" class="eye" onclick="recheckpassword()" />
+                    <input type="password" onclick="input_repassword()" />
+                </div>
+                <h>已有账户？点击<span onclick="tologin()">登录</span></h>
+                <button id="zhuce2" type="submit">注 册</button>
+                <img src="img/icon/X.png" id="X" onclick="close_pass()" />
+            </div>
+            <div class="spring">
+                <div id="simple_timer">
+                </div>
+                <div class="countdown"></div>
+                <a href="2018-summer.html"> <img src="img/logo/LOGO-spring.png" id="logo-pic" /></a>
+                <div class="back">
+                    <div class="back-spring">回首</div>
+                    <div class="like-spring">雨无声</div>
+                </div>
+                <div class="main">春</div>
+                <div class="yinyan">
+                    <p>一年的时间，记录你的美好；</p>
+
+                    <p>新旧之际，分享你的时光。</p>
+
+                    <p>记录流逝，</p>
+
+                    <p>回首岁月。</p>
+                </div>
+                <button id="denglu" type="submit" onclick="login()">登 陆</button>
+                <button id="zhuce" type="submit" onclick="pass()">注 册</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script type="text/javascript" src="js/jquery.syotimer.js"></script>
+    <script type="text/javascript" src="js/loginpass.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax.min.js"></script>
+    <script>
+        $("#simple_timer").syotimer({
+            year: 2019,
+            month: 1,
+            day: 1,
+            hour: 0,
+            minute: 0,
+            lang: 'chs',
+        });
+        $(document).ready(function() {
+            $('#scene').parallax();
+        });
+        var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/; //手机号正则 
+        var count = 60; //间隔函数，1秒执行
+        var InterValObj1; //timer变量，控制时间
+        var curCount1; //当前剩余秒数
+        /*第一*/
+        function sendMessage1() {
+            curCount1 = count;
+            var phone = $.trim($('#phone').val());
+            if (!phoneReg.test(phone)) {
+                alert(" 请输入有效的手机号码");
+                return false;
+            }
+            //设置button效果，开始计时
+            $("#send").attr("disabled", "true");
+            $("#send").val(+curCount1 + "秒再获取");
+            InterValObj1 = window.setInterval(SetRemainTime1, 1000); //启动计时器，1秒执行一次
+            //向后台发送处理数据
+        }
+
+        function SetRemainTime1() {
+            if (curCount1 == 0) {
+                window.clearInterval(InterValObj1); //停止计时器
+                $("#send").removeAttr("disabled"); //启用按钮
+                $("#send").val("重新发送");
+            } else {
+                curCount1--;
+                $("#send").val(+curCount1 + "秒再获取");
+            }
+        }
+    </script>
+</body>
+
+</html>
